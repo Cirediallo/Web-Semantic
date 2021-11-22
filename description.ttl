@@ -8,7 +8,7 @@
 @prefix ex:  <http://example.org/a#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-ex:DanaSenateurs a void:Dataset ;
+ex:Country a void:Dataset ;
     foaf:homepage ex: ;
     dcterms:title "Africa 2018 Population and internet users statistic"@en ;
     dcterms:description "Data on internet users and Africa country's population estimation in 2018"@en ;
