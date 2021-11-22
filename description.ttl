@@ -1,0 +1,24 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo:  <https://dbpedia.org/ontology/> .
+@prefix schema:  <https://schema.org/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:  <http://example.org/a#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:DanaSenateurs a void:Dataset ;
+    foaf:homepage ex: ;
+    dcterms:title "Africa 2018 Population and internet users statistic"@en ;
+    dcterms:description "Data on internet users and Africa country's population estimation in 2018"@en ;
+    dcterms:contributor
+        [
+            a foaf:Person ;
+            schema:name "DIALLO Ciré"
+        ];
+    dcterms:source [foaf:homepage <https://data.humdata.org/dataset/africa-population-and-internet-users-statistics/>] ;
+    dcterms:modified "2018-07-09"^^xsd:date ;
+    dcterms:subject <https://dbpedia.org/page/Africa> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:dataDump <https://github.com/Cirediallo/Web-Semantic/blob/main/rdf.ttl>

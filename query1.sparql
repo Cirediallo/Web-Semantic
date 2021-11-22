@@ -11,4 +11,5 @@ WHERE {
   FILTER(?penetration > 50)
   ?africa ex:africa ?name
 } 
+
 LIMIT 10
