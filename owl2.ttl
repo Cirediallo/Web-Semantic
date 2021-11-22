@@ -1,0 +1,853 @@
+@prefix ex: <http://example.org/a#> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/a#africa
+ex:africa rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/a#internetGrowth
+ex:internetGrowth rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/a#internetUsers31Dec2000
+ex:internetUsers31Dec2000 rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/a#population2018
+ex:population2018 rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/a#facebookSubscribers31Dec2017
+ex:facebookSubscribers31Dec2017 rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/a#internetUsers31Dec2017
+ex:internetUsers31Dec2017 rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/a#penetrationPop
+ex:penetrationPop rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/a#Country
+ex:Country rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#HighFaceUser
+<http://www.co-ode.org/ontologies/ont.owl#HighFaceUser> rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty ex:facebookSubscribers31Dec2017 ;
+                                                                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                          owl:onDatatype xsd:long ;
+                                                                                                                          owl:withRestrictions ( [ xsd:minExclusive "20000"^^xsd:long
+                                                                                                                                                 ]
+                                                                                                                                               )
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                        rdfs:subClassOf ex:Country .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#HighInternetUsers
+<http://www.co-ode.org/ontologies/ont.owl#HighInternetUsers> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty ex:internetUsers31Dec2017 ;
+                                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                               owl:onDatatype xsd:integer ;
+                                                                                                                               owl:withRestrictions ( [ xsd:minExclusive 10000000
+                                                                                                                                                      ]
+                                                                                                                                                    )
+                                                                                                                             ]
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ;
+                                                             rdfs:subClassOf ex:Country .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#LowFaceUser
+<http://www.co-ode.org/ontologies/ont.owl#LowFaceUser> rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty ex:facebookSubscribers31Dec2017 ;
+                                                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                         owl:onDatatype xsd:long ;
+                                                                                                                         owl:withRestrictions ( [ xsd:maxExclusive "20000"^^xsd:long
+                                                                                                                                                ]
+                                                                                                                                              )
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:subClassOf ex:Country .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#LowInternetUsers
+<http://www.co-ode.org/ontologies/ont.owl#LowInternetUsers> rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty ex:internetUsers31Dec2017 ;
+                                                                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                              owl:onDatatype xsd:integer ;
+                                                                                                                              owl:withRestrictions ( [ xsd:maxExclusive 10000
+                                                                                                                                                     ]
+                                                                                                                                                   )
+                                                                                                                            ]
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ;
+                                                            rdfs:subClassOf ex:Country .
+
+
+###  https://github.com/Ajamelot56/Dana-Senateurs/BadPenetrationpop
+<https://github.com/Ajamelot56/Dana-Senateurs/BadPenetrationpop> rdf:type owl:Class ;
+                                                                 owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty ex:penetrationPop ;
+                                                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                   owl:onDatatype xsd:decimal ;
+                                                                                                                                   owl:withRestrictions ( [ xsd:maxExclusive 20
+                                                                                                                                                          ]
+                                                                                                                                                        )
+                                                                                                                                 ]
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ] .
+
+
+###  https://github.com/Ajamelot56/Dana-Senateurs/GoodPenetrationpop
+<https://github.com/Ajamelot56/Dana-Senateurs/GoodPenetrationpop> rdf:type owl:Class ;
+                                                                  owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty ex:penetrationPop ;
+                                                                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                    owl:onDatatype xsd:decimal ;
+                                                                                                                                    owl:withRestrictions ( [ xsd:minExclusive 20
+                                                                                                                                                           ]
+                                                                                                                                                         )
+                                                                                                                                  ]
+                                                                                                             ]
+                                                                                                           ) ;
+                                                                                        rdf:type owl:Class
+                                                                                      ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/country/Algeria
+<http://example.org/country/Algeria> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 19000000 ;
+                                     ex:internetUsers31Dec2017 18580000 ;
+                                     ex:penetrationPop 44.2 ;
+                                     ex:africa "Algeria" ;
+                                     ex:internetGrowth "37,06%" ;
+                                     ex:internetUsers31Dec2000 "50" ;
+                                     ex:population2018 "42,008,054" .
+
+
+###  http://example.org/country/Angola
+<http://example.org/country/Angola> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 3800000 ;
+                                    ex:internetUsers31Dec2017 5951453 ;
+                                    ex:penetrationPop 19.3 ;
+                                    ex:africa "Angola" ;
+                                    ex:internetGrowth "19,74%" ;
+                                    ex:internetUsers31Dec2000 "30" ;
+                                    ex:population2018 "30,774,205" .
+
+
+###  http://example.org/country/Benin
+<http://example.org/country/Benin> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 920 ;
+                                   ex:internetUsers31Dec2017 3801758 ;
+                                   ex:penetrationPop 33.1 ;
+                                   ex:africa "Benin" ;
+                                   ex:internetGrowth "25,25%" ;
+                                   ex:internetUsers31Dec2000 "15" ;
+                                   ex:population2018 "11,458,674" .
+
+
+###  http://example.org/country/Botswana
+<http://example.org/country/Botswana> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 830 ;
+                                      ex:internetUsers31Dec2017 923528 ;
+                                      ex:penetrationPop 39.6 ;
+                                      ex:africa "Botswana" ;
+                                      ex:internetGrowth "6,06%" ;
+                                      ex:internetUsers31Dec2000 "15" ;
+                                      ex:population2018 "2,333,201" .
+
+
+###  http://example.org/country/Burkina-Faso
+<http://example.org/country/Burkina-Faso> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 840 ;
+                                          ex:internetUsers31Dec2017 3704265 ;
+                                          ex:penetrationPop 18.8 ;
+                                          ex:africa "Burkina-Faso" ;
+                                          ex:internetGrowth "36,94%" ;
+                                          ex:internetUsers31Dec2000 "10" ;
+                                          ex:population2018 "19,751,651" .
+
+
+###  http://example.org/country/Burundi
+<http://example.org/country/Burundi> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 450 ;
+                                     ex:internetUsers31Dec2017 617116 ;
+                                     ex:penetrationPop 5.5 ;
+                                     ex:africa "Burundi" ;
+                                     ex:internetGrowth "20,47%" ;
+                                     ex:internetUsers31Dec2000 "3" ;
+                                     ex:population2018 "11,216,450" .
+
+
+###  http://example.org/country/Cabo-Verde
+<http://example.org/country/Cabo-Verde> rdf:type owl:NamedIndividual ,
+                                                 ex:Country ;
+                                        ex:facebookSubscribers31Dec2017 240 ;
+                                        ex:internetUsers31Dec2017 265972 ;
+                                        ex:penetrationPop 48.1 ;
+                                        ex:africa "Cabo-Verde" ;
+                                        ex:internetGrowth "3,23%" ;
+                                        ex:internetUsers31Dec2000 "8" ;
+                                        ex:population2018 "553,335" .
+
+
+###  http://example.org/country/Cameroon
+<http://example.org/country/Cameroon> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 2700000 ;
+                                      ex:internetUsers31Dec2017 6128422 ;
+                                      ex:penetrationPop 24.8 ;
+                                      ex:africa "Cameroon" ;
+                                      ex:internetGrowth "30,54%" ;
+                                      ex:internetUsers31Dec2000 "20" ;
+                                      ex:population2018 "24,678,234" .
+
+
+###  http://example.org/country/Central-African-Rep.
+<http://example.org/country/Central-African-Rep.> rdf:type owl:NamedIndividual ,
+                                                           ex:Country ;
+                                                  ex:facebookSubscribers31Dec2017 96 ;
+                                                  ex:internetUsers31Dec2017 256432 ;
+                                                  ex:penetrationPop 5.4 ;
+                                                  ex:africa "Central-African-Rep." ;
+                                                  ex:internetGrowth "17,00%" ;
+                                                  ex:internetUsers31Dec2000 "1,5" ;
+                                                  ex:population2018 "4,737,423" .
+
+
+###  http://example.org/country/Comoros
+<http://example.org/country/Comoros> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 120 ;
+                                     ex:internetUsers31Dec2017 130578 ;
+                                     ex:penetrationPop 15.7 ;
+                                     ex:africa "Comoros" ;
+                                     ex:internetGrowth "8,61%" ;
+                                     ex:internetUsers31Dec2000 "1,5" ;
+                                     ex:population2018 "832,347" .
+
+
+###  http://example.org/country/Congo-Dem.Rep.
+<http://example.org/country/Congo-Dem.Rep.> rdf:type owl:NamedIndividual ,
+                                                     ex:Country ;
+                                            ex:facebookSubscribers31Dec2017 2100000 ;
+                                            ex:internetUsers31Dec2017 5137271 ;
+                                            ex:penetrationPop 6.1 ;
+                                            ex:africa "Congo-Dem.Rep." ;
+                                            ex:internetGrowth "1,027,354%" ;
+                                            ex:internetUsers31Dec2000 "500" ;
+                                            ex:population2018 "84,004,989" .
+
+
+###  http://example.org/country/Cote-Ivoire
+<http://example.org/country/Cote-Ivoire> rdf:type owl:NamedIndividual ,
+                                                  ex:Country ;
+                                         ex:facebookSubscribers31Dec2017 3800000 ;
+                                         ex:internetUsers31Dec2017 6318355 ;
+                                         ex:penetrationPop 26.3 ;
+                                         ex:africa "Cote-Ivoire" ;
+                                         ex:internetGrowth "16,25%" ;
+                                         ex:internetUsers31Dec2000 "40" ;
+                                         ex:population2018 "24,905,843" .
+
+
+###  http://example.org/country/Djibouti
+<http://example.org/country/Djibouti> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 180 ;
+                                      ex:internetUsers31Dec2017 180 ;
+                                      ex:penetrationPop 18.5 ;
+                                      ex:africa "Djibouti" ;
+                                      ex:internetGrowth "12,76%" ;
+                                      ex:internetUsers31Dec2000 "1,4" ;
+                                      ex:population2018 "971,408" .
+
+
+###  http://example.org/country/Egypt
+<http://example.org/country/Egypt> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 35000000 ;
+                                   ex:internetUsers31Dec2017 49231493 ;
+                                   ex:penetrationPop 49.5 ;
+                                   ex:africa "Egypt" ;
+                                   ex:internetGrowth "10,84%" ;
+                                   ex:internetUsers31Dec2000 "450" ;
+                                   ex:population2018 "99,375,741" .
+
+
+###  http://example.org/country/Equatorial-Guinea
+<http://example.org/country/Equatorial-Guinea> rdf:type owl:NamedIndividual ,
+                                                        ex:Country ;
+                                               ex:facebookSubscribers31Dec2017 67 ;
+                                               ex:internetUsers31Dec2017 312704 ;
+                                               ex:penetrationPop 23.8 ;
+                                               ex:africa "Equatorial-Guinea" ;
+                                               ex:internetGrowth "62,44%" ;
+                                               ex:internetUsers31Dec2000 "500" ;
+                                               ex:population2018 "1,313,894" .
+
+
+###  http://example.org/country/Eritrea
+<http://example.org/country/Eritrea> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 63 ;
+                                     ex:internetUsers31Dec2017 71 ;
+                                     ex:penetrationPop 1.4 ;
+                                     ex:africa "Eritrea" ;
+                                     ex:internetGrowth "1,32%" ;
+                                     ex:internetUsers31Dec2000 "5" ;
+                                     ex:population2018 "5,187,948" .
+
+
+###  http://example.org/country/Ethiopia
+<http://example.org/country/Ethiopia> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 4500000 ;
+                                      ex:internetUsers31Dec2017 16437811 ;
+                                      ex:penetrationPop 15.3 ;
+                                      ex:africa "Ethiopia" ;
+                                      ex:internetGrowth "164,28%" ;
+                                      ex:internetUsers31Dec2000 "10" ;
+                                      ex:population2018 "107,534,882" .
+
+
+###  http://example.org/country/Gabon
+<http://example.org/country/Gabon> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 620 ;
+                                   ex:internetUsers31Dec2017 985492 ;
+                                   ex:penetrationPop 47.7 ;
+                                   ex:africa "Gabon" ;
+                                   ex:internetGrowth "6,47%" ;
+                                   ex:internetUsers31Dec2000 "15" ;
+                                   ex:population2018 "2,067,561" .
+
+
+###  http://example.org/country/Gambia
+<http://example.org/country/Gambia> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 310 ;
+                                    ex:internetUsers31Dec2017 392277 ;
+                                    ex:penetrationPop 18.1 ;
+                                    ex:africa "Gambia" ;
+                                    ex:internetGrowth "9,71%" ;
+                                    ex:internetUsers31Dec2000 "4" ;
+                                    ex:population2018 "2,163,765" .
+
+
+###  http://example.org/country/Ghana
+<http://example.org/country/Ghana> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 4900000 ;
+                                   ex:internetUsers31Dec2017 10110000 ;
+                                   ex:penetrationPop 34.3 ;
+                                   ex:africa "Ghana" ;
+                                   ex:internetGrowth "33,60%" ;
+                                   ex:internetUsers31Dec2000 "30" ;
+                                   ex:population2018 "29,463,643" .
+
+
+###  http://example.org/country/Guinea
+<http://example.org/country/Guinea> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 1500000 ;
+                                    ex:internetUsers31Dec2017 1602485 ;
+                                    ex:penetrationPop 12.3 ;
+                                    ex:africa "Guinea" ;
+                                    ex:internetGrowth "19,93%" ;
+                                    ex:internetUsers31Dec2000 "8" ;
+                                    ex:population2018 "13,052,608" .
+
+
+###  http://example.org/country/Guinea-Bissau
+<http://example.org/country/Guinea-Bissau> rdf:type owl:NamedIndividual ,
+                                                    ex:Country ;
+                                           ex:facebookSubscribers31Dec2017 110 ;
+                                           ex:internetUsers31Dec2017 120 ;
+                                           ex:penetrationPop 6.3 ;
+                                           ex:africa "Guinea-Bissau" ;
+                                           ex:internetGrowth "7,90%" ;
+                                           ex:internetUsers31Dec2000 "1,5" ;
+                                           ex:population2018 "1,907,268" .
+
+
+###  http://example.org/country/Lesotho
+<http://example.org/country/Lesotho> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 310 ;
+                                     ex:internetUsers31Dec2017 62786 ;
+                                     ex:penetrationPop 27.7 ;
+                                     ex:africa "Lesotho" ;
+                                     ex:internetGrowth "15,60%" ;
+                                     ex:internetUsers31Dec2000 "4" ;
+                                     ex:population2018 "2,263,010" .
+
+
+###  http://example.org/country/Liberia
+<http://example.org/country/Liberia> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 330 ;
+                                     ex:internetUsers31Dec2017 395063 ;
+                                     ex:penetrationPop 8.1 ;
+                                     ex:africa "Liberia" ;
+                                     ex:internetGrowth "78,91%" ;
+                                     ex:internetUsers31Dec2000 "500" ;
+                                     ex:population2018 "4,853,516" .
+
+
+###  http://example.org/country/Libya
+<http://example.org/country/Libya> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 3500000 ;
+                                   ex:internetUsers31Dec2017 3800000 ;
+                                   ex:penetrationPop 58.7 ;
+                                   ex:africa "Libya" ;
+                                   ex:internetGrowth "37,90%" ;
+                                   ex:internetUsers31Dec2000 "10" ;
+                                   ex:population2018 "6,470,956" .
+
+
+###  http://example.org/country/Madagascar
+<http://example.org/country/Madagascar> rdf:type owl:NamedIndividual ,
+                                                 ex:Country ;
+                                        ex:facebookSubscribers31Dec2017 1700000 ;
+                                        ex:internetUsers31Dec2017 1900000 ;
+                                        ex:penetrationPop 7.2 ;
+                                        ex:africa "Madagascar" ;
+                                        ex:internetGrowth "6,23%" ;
+                                        ex:internetUsers31Dec2000 "30" ;
+                                        ex:population2018 "26,262,810" .
+
+
+###  http://example.org/country/Malawi
+<http://example.org/country/Malawi> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 720 ;
+                                    ex:internetUsers31Dec2017 1828503 ;
+                                    ex:penetrationPop 9.5 ;
+                                    ex:africa "Malawi" ;
+                                    ex:internetGrowth "12,09%" ;
+                                    ex:internetUsers31Dec2000 "15" ;
+                                    ex:population2018 "19,164,728" .
+
+
+###  http://example.org/country/Mali
+<http://example.org/country/Mali> rdf:type owl:NamedIndividual ,
+                                           ex:Country ;
+                                  ex:facebookSubscribers31Dec2017 1500000 ;
+                                  ex:internetUsers31Dec2017 12480176 ;
+                                  ex:penetrationPop 65.3 ;
+                                  ex:africa "Mali" ;
+                                  ex:internetGrowth "66,28%" ;
+                                  ex:internetUsers31Dec2000 "18,8" ;
+                                  ex:population2018 "19,107,706" .
+
+
+###  http://example.org/country/Mauritania
+<http://example.org/country/Mauritania> rdf:type owl:NamedIndividual ,
+                                                 ex:Country ;
+                                        ex:facebookSubscribers31Dec2017 770 ;
+                                        ex:internetUsers31Dec2017 810 ;
+                                        ex:penetrationPop 17.8 ;
+                                        ex:africa "Mauritania" ;
+                                        ex:internetGrowth "16,10%" ;
+                                        ex:internetUsers31Dec2000 "5" ;
+                                        ex:population2018 "4,540,068" .
+
+
+###  http://example.org/country/Mauritius
+<http://example.org/country/Mauritius> rdf:type owl:NamedIndividual ,
+                                                ex:Country ;
+                                       ex:facebookSubscribers31Dec2017 700 ;
+                                       ex:internetUsers31Dec2017 803896 ;
+                                       ex:penetrationPop 63.4 ;
+                                       ex:africa "Mauritius" ;
+                                       ex:internetGrowth "824%" ;
+                                       ex:internetUsers31Dec2000 "87" ;
+                                       ex:population2018 "1,268,315" .
+
+
+###  http://example.org/country/Morocco
+<http://example.org/country/Morocco> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 15000000 ;
+                                     ex:internetUsers31Dec2017 22567154 ;
+                                     ex:penetrationPop 62.4 ;
+                                     ex:africa "Morocco" ;
+                                     ex:internetGrowth "22,47%" ;
+                                     ex:internetUsers31Dec2000 "100" ;
+                                     ex:population2018 "36,191,805" .
+
+
+###  http://example.org/country/Mozambique
+<http://example.org/country/Mozambique> rdf:type owl:NamedIndividual ,
+                                                 ex:Country ;
+                                        ex:facebookSubscribers31Dec2017 1800000 ;
+                                        ex:internetUsers31Dec2017 5279135 ;
+                                        ex:penetrationPop 17.3 ;
+                                        ex:africa "Mozambique" ;
+                                        ex:internetGrowth "17,50%" ;
+                                        ex:internetUsers31Dec2000 "30" ;
+                                        ex:population2018 "30,528,673" .
+
+
+###  http://example.org/country/Namibia
+<http://example.org/country/Namibia> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 570 ;
+                                     ex:internetUsers31Dec2017 797027 ;
+                                     ex:penetrationPop 30.8 ;
+                                     ex:africa "Namibia" ;
+                                     ex:internetGrowth "2,56%" ;
+                                     ex:internetUsers31Dec2000 "30" ;
+                                     ex:population2018 "2,587,801" .
+
+
+###  http://example.org/country/Niger
+<http://example.org/country/Niger> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 440 ;
+                                   ex:internetUsers31Dec2017 951548 ;
+                                   ex:penetrationPop 4.3 ;
+                                   ex:africa "Niger" ;
+                                   ex:internetGrowth "18,93%" ;
+                                   ex:internetUsers31Dec2000 "5" ;
+                                   ex:population2018 "22,311,375" .
+
+
+###  http://example.org/country/Nigeria
+<http://example.org/country/Nigeria> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 17000000 ;
+                                     ex:internetUsers31Dec2017 98391456 ;
+                                     ex:penetrationPop 50.2 ;
+                                     ex:africa "Nigeria" ;
+                                     ex:internetGrowth "49,10%" ;
+                                     ex:internetUsers31Dec2000 "200" ;
+                                     ex:population2018 "195,875,237" .
+
+
+###  http://example.org/country/Rest-of-World
+<http://example.org/country/Rest-of-World> rdf:type owl:NamedIndividual ,
+                                                    ex:Country ;
+                                           ex:facebookSubscribers31Dec2017 "1942054452" ;
+                                           ex:internetUsers31Dec2017 "3703602606" ;
+                                           ex:penetrationPop "58,4" ;
+                                           ex:africa "Rest-of-World" ;
+                                           ex:internetGrowth "89.1 %" ;
+                                           ex:internetUsers31Dec2000 "83.1 %" ;
+                                           ex:population2018 "6,346,844,099" .
+
+
+###  http://example.org/country/Rwanda
+<http://example.org/country/Rwanda> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 490 ;
+                                    ex:internetUsers31Dec2017 3724678 ;
+                                    ex:penetrationPop 29.8 ;
+                                    ex:africa "Rwanda" ;
+                                    ex:internetGrowth "74,39%" ;
+                                    ex:internetUsers31Dec2000 "5" ;
+                                    ex:population2018 "12,501,156" .
+
+
+###  http://example.org/country/Senegal
+<http://example.org/country/Senegal> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 2900000 ;
+                                     ex:internetUsers31Dec2017 9749527 ;
+                                     ex:penetrationPop 59.8 ;
+                                     ex:africa "Senegal" ;
+                                     ex:internetGrowth "24,27%" ;
+                                     ex:internetUsers31Dec2000 "40" ;
+                                     ex:population2018 "16,294,270" .
+
+
+###  http://example.org/country/Seychelles
+<http://example.org/country/Seychelles> rdf:type owl:NamedIndividual ,
+                                                 ex:Country ;
+                                        ex:facebookSubscribers31Dec2017 61 ;
+                                        ex:internetUsers31Dec2017 67119 ;
+                                        ex:penetrationPop 70.5 ;
+                                        ex:africa "Seychelles" ;
+                                        ex:internetGrowth "1,02%" ;
+                                        ex:internetUsers31Dec2000 "6" ;
+                                        ex:population2018 "95,235" .
+
+
+###  http://example.org/country/Sierra-Leone
+<http://example.org/country/Sierra-Leone> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 450 ;
+                                          ex:internetUsers31Dec2017 902462 ;
+                                          ex:penetrationPop 11.7 ;
+                                          ex:africa "Sierra-Leone" ;
+                                          ex:internetGrowth "17,95%" ;
+                                          ex:internetUsers31Dec2000 "5" ;
+                                          ex:population2018 "7,719,729" .
+
+
+###  http://example.org/country/Somalia
+<http://example.org/country/Somalia> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 1100000 ;
+                                     ex:internetUsers31Dec2017 1200000 ;
+                                     ex:penetrationPop 7.9 ;
+                                     ex:africa "Somalia" ;
+                                     ex:internetGrowth "599,90%" ;
+                                     ex:internetUsers31Dec2000 "200" ;
+                                     ex:population2018 "15,181,925" .
+
+
+###  http://example.org/country/South-Africa
+<http://example.org/country/South-Africa> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 16000000 ;
+                                          ex:internetUsers31Dec2017 30815634 ;
+                                          ex:penetrationPop 53.7 ;
+                                          ex:africa "South-Africa" ;
+                                          ex:internetGrowth "1,18%" ;
+                                          ex:internetUsers31Dec2000 "2,400,000" ;
+                                          ex:population2018 "57,398,421" .
+
+
+###  http://example.org/country/South-Sudan
+<http://example.org/country/South-Sudan> rdf:type owl:NamedIndividual ,
+                                                  ex:Country ;
+                                         ex:facebookSubscribers31Dec2017 180 ;
+                                         ex:internetUsers31Dec2017 2229963 ;
+                                         ex:penetrationPop 17.3 ;
+                                         ex:africa "South-Sudan" ;
+                                         ex:internetGrowth "n/a" ;
+                                         ex:internetUsers31Dec2000 "n/a" ;
+                                         ex:population2018 "12,919,053" .
+
+
+###  http://example.org/country/Sudan
+<http://example.org/country/Sudan> rdf:type owl:NamedIndividual ,
+                                            ex:Country ;
+                                   ex:facebookSubscribers31Dec2017 2600000 ;
+                                   ex:internetUsers31Dec2017 11816570 ;
+                                   ex:penetrationPop 28.5 ;
+                                   ex:africa "Sudan" ;
+                                   ex:internetGrowth "39,29%" ;
+                                   ex:internetUsers31Dec2000 "30" ;
+                                   ex:population2018 "41,511,526" .
+
+
+###  http://example.org/country/Swaziland
+<http://example.org/country/Swaziland> rdf:type owl:NamedIndividual ,
+                                                ex:Country ;
+                                       ex:facebookSubscribers31Dec2017 170 ;
+                                       ex:internetUsers31Dec2017 446051 ;
+                                       ex:penetrationPop 32.1 ;
+                                       ex:africa "Swaziland" ;
+                                       ex:internetGrowth "4,36%" ;
+                                       ex:internetUsers31Dec2000 "10" ;
+                                       ex:population2018 "1,391,385" .
+
+
+###  http://example.org/country/TOTAL-AFRICA
+<http://example.org/country/TOTAL-AFRICA> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 "177005700" ;
+                                          ex:internetUsers31Dec2017 453329534 ;
+                                          ex:penetrationPop "35,2" ;
+                                          ex:africa "TOTAL-AFRICA" ;
+                                          ex:internetGrowth "9,94%" ;
+                                          ex:internetUsers31Dec2000 "4,514,400" ;
+                                          ex:population2018 "1,287,914,329" .
+
+
+###  http://example.org/country/Tanzania
+<http://example.org/country/Tanzania> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 6100000 ;
+                                      ex:internetUsers31Dec2017 23000000 ;
+                                      ex:penetrationPop 38.9 ;
+                                      ex:africa "Tanzania" ;
+                                      ex:internetGrowth "19,90%" ;
+                                      ex:internetUsers31Dec2000 "115" ;
+                                      ex:population2018 "59,091,392" .
+
+
+###  http://example.org/country/Togo
+<http://example.org/country/Togo> rdf:type owl:NamedIndividual ,
+                                           ex:Country ;
+                                  ex:facebookSubscribers31Dec2017 560 ;
+                                  ex:internetUsers31Dec2017 899956 ;
+                                  ex:penetrationPop 11.3 ;
+                                  ex:africa "Togo" ;
+                                  ex:internetGrowth "800%" ;
+                                  ex:internetUsers31Dec2000 "100" ;
+                                  ex:population2018 "7,990,926" .
+
+
+###  http://example.org/country/Tunisia
+<http://example.org/country/Tunisia> rdf:type owl:NamedIndividual ,
+                                              ex:Country ;
+                                     ex:facebookSubscribers31Dec2017 6400000 ;
+                                     ex:internetUsers31Dec2017 7898534 ;
+                                     ex:penetrationPop 67.7 ;
+                                     ex:africa "Tunisia" ;
+                                     ex:internetGrowth "7,80%" ;
+                                     ex:internetUsers31Dec2000 "100" ;
+                                     ex:population2018 "11,659,174" .
+
+
+###  http://example.org/country/Uganda
+<http://example.org/country/Uganda> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 2600000 ;
+                                    ex:internetUsers31Dec2017 19000000 ;
+                                    ex:penetrationPop 42.9 ;
+                                    ex:africa "Uganda" ;
+                                    ex:internetGrowth "47,40%" ;
+                                    ex:internetUsers31Dec2000 "40" ;
+                                    ex:population2018 "44,270,563" .
+
+
+###  http://example.org/country/WORLD-TOTAL
+<http://example.org/country/WORLD-TOTAL> rdf:type owl:NamedIndividual ,
+                                                  ex:Country ;
+                                         ex:facebookSubscribers31Dec2017 "2119060152" ;
+                                         ex:internetUsers31Dec2017 "4156932140" ;
+                                         ex:penetrationPop "54,4" ;
+                                         ex:africa "WORLD-TOTAL" ;
+                                         ex:internetGrowth "100.0 %" ;
+                                         ex:internetUsers31Dec2000 "100.0 %" ;
+                                         ex:population2018 "7,634,758,428" .
+
+
+###  http://example.org/country/Zambia
+<http://example.org/country/Zambia> rdf:type owl:NamedIndividual ,
+                                             ex:Country ;
+                                    ex:facebookSubscribers31Dec2017 1600000 ;
+                                    ex:internetUsers31Dec2017 7248773 ;
+                                    ex:penetrationPop 41.2 ;
+                                    ex:africa "Zambia" ;
+                                    ex:internetGrowth "36,14%" ;
+                                    ex:internetUsers31Dec2000 "20" ;
+                                    ex:population2018 "17,609,178" .
+
+
+###  http://example.org/country/Zimbabwe
+<http://example.org/country/Zimbabwe> rdf:type owl:NamedIndividual ,
+                                               ex:Country ;
+                                      ex:facebookSubscribers31Dec2017 880 ;
+                                      ex:internetUsers31Dec2017 6796314 ;
+                                      ex:penetrationPop 40.2 ;
+                                      ex:africa "Zimbabwe" ;
+                                      ex:internetGrowth "13,49%" ;
+                                      ex:internetUsers31Dec2000 "50" ;
+                                      ex:population2018 "16,913,261" .
+
+
+###  http://example.org/country/Mayotte-(FR)
+<http://example.org/country/Mayotte-(FR)> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 71 ;
+                                          ex:internetUsers31Dec2017 10794 ;
+                                          ex:penetrationPop 41.6 ;
+                                          ex:africa "Mayotte-(FR)" ;
+                                          ex:internetGrowth "n/a" ;
+                                          ex:internetUsers31Dec2000 "n/a" ;
+                                          ex:population2018 "259,682" .
+
+
+###  http://example.org/country/Reunion-(FR)
+<http://example.org/country/Reunion-(FR)> rdf:type owl:NamedIndividual ,
+                                                   ex:Country ;
+                                          ex:facebookSubscribers31Dec2017 420 ;
+                                          ex:internetUsers31Dec2017 480 ;
+                                          ex:penetrationPop 54.3 ;
+                                          ex:africa "Reunion-(FR)" ;
+                                          ex:internetGrowth "269%" ;
+                                          ex:internetUsers31Dec2000 "130" ;
+                                          ex:population2018 "883,247" .
+
+
+###  http://example.org/country/Saint-Helena-(UK)
+<http://example.org/country/Saint-Helena-(UK)> rdf:type owl:NamedIndividual ,
+                                                        ex:Country ;
+                                               ex:facebookSubscribers31Dec2017 17 ;
+                                               ex:internetUsers31Dec2017 22 ;
+                                               ex:penetrationPop 3 ,
+                                                                 54 ;
+                                               ex:africa "Saint-Helena-(UK)" ;
+                                               ex:internetGrowth "n/a" ;
+                                               ex:internetUsers31Dec2000 "n/a" ;
+                                               ex:population2018 "4,049" .
+
+
+###  http://example.org/country/Sao-Tome&Principe
+<http://example.org/country/Sao-Tome&Principe> rdf:type owl:NamedIndividual ,
+                                                        ex:Country ;
+                                               ex:facebookSubscribers31Dec2017 52 ;
+                                               ex:internetUsers31Dec2017 57875 ;
+                                               ex:penetrationPop 27.7 ;
+                                               ex:africa "Sao-Tome&Principe" ;
+                                               ex:internetGrowth "790%" ;
+                                               ex:internetUsers31Dec2000 "6,5" ;
+                                               ex:population2018 "208,818" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

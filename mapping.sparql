@@ -1,27 +1,28 @@
-PREFIX dbo: <https://dbpedia.org/ontology/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
-PREFIX schema: <https://schema.org/>
 PREFIX ex: <http://example.org/a#>
+PREFIX dbo: <https://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+
+
 
 CONSTRUCT {
     ?URI a ex:Country;
     ex:africa ?africa;
-    ex:population2018 ?pop2018;
+    ex:population2018 ?population2018;
     ex:internetUsers31Dec2000 ?internetUsers31Dec2000;
     ex:internetUsers31Dec2017 ?internetUsers31Dec2017;
     ex:penetrationPop ?penetrationPop;
     ex:internetGrowth ?internetGrowth;
     ex:facebookSubscribers31Dec2017 ?facebookSubscribers31Dec2017;
-
 }
-FROM <file:africa-internet-user-2018.csv>
+FROM <file:data.csv>
 WHERE {
-    BIND( URI(CONCAT('http://example.org/country/', ?africa)) AS ?URI)
-    BIND(xsd:string(?africa) AS ?africa)
-    BIND(xsd:string(?population2018) AS ?pop2018)
-    BIND(xsd:string(?internetUsers31Dec2000) AS ?internetUsers31Dec2000)
-    BIND(xsd:string(?Users31Dec2017) AS ?internetUsers31Dec2017)
-    BIND(xsd:string(?penetrationPop) AS ?penetrationPop)
-    BIND(xsd:string(?internetGrowth) AS ?internetGrowth)
-    BIND(xsd:string(?facebookSubscribers31Dec2017) AS ?facebookSubscribers31Dec2017)
+    BIND (URI(CONCAT('http://example.org/country/', ?africa)) AS ?URI)
+    BIND (xsd:string(?africa) AS ?africa)
+    BIND (xsd:integer(?population2018) AS ?population2018)
+    BIND (xsd:string(?internetUsers31Dec2000) AS ?internetUsers31Dec2000)
+    BIND ((?internetUsers31Dec2017) AS ?internetUsers31Dec2017)
+    BIND (xsd:decimal(?penetrationPop) AS ?penetrationPop)
+    BIND (xsd:string(?internetGrowth) AS ?internetGrowth)
+    BIND (xsd:integer(?facebookSubscribers31Dec2017) AS ?facebookSubscribers31Dec2017)
 }
