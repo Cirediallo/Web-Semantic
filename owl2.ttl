@@ -55,6 +55,40 @@ ex:penetrationPop rdf:type owl:DatatypeProperty .
 ex:Country rdf:type owl:Class .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#BadPenetrationpop
+<http://www.co-ode.org/ontologies/ont.owl#BadPenetrationpop> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty ex:penetrationPop ;
+                                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                               owl:onDatatype xsd:decimal ;
+                                                                                                                               owl:withRestrictions ( [ xsd:maxExclusive 20
+                                                                                                                                                      ]
+                                                                                                                                                    )
+                                                                                                                             ]
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#GoodPenetrationpop
+<http://www.co-ode.org/ontologies/ont.owl#GoodPenetrationpop> rdf:type owl:Class ;
+                                                              owl:equivalentClass [ owl:intersectionOf ( ex:Country
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty ex:penetrationPop ;
+                                                                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                owl:onDatatype xsd:decimal ;
+                                                                                                                                owl:withRestrictions ( [ xsd:minExclusive 20
+                                                                                                                                                       ]
+                                                                                                                                                     )
+                                                                                                                              ]
+                                                                                                         ]
+                                                                                                       ) ;
+                                                                                    rdf:type owl:Class
+                                                                                  ] .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#HighFaceUser
 <http://www.co-ode.org/ontologies/ont.owl#HighFaceUser> rdf:type owl:Class ;
                                                         owl:equivalentClass [ owl:intersectionOf ( ex:Country
@@ -125,40 +159,6 @@ ex:Country rdf:type owl:Class .
                                                                                   rdf:type owl:Class
                                                                                 ] ;
                                                             rdfs:subClassOf ex:Country .
-
-
-###  https://github.com/Ajamelot56/Dana-Senateurs/BadPenetrationpop
-<https://github.com/Ajamelot56/Dana-Senateurs/BadPenetrationpop> rdf:type owl:Class ;
-                                                                 owl:equivalentClass [ owl:intersectionOf ( ex:Country
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty ex:penetrationPop ;
-                                                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                                                   owl:withRestrictions ( [ xsd:maxExclusive 20
-                                                                                                                                                          ]
-                                                                                                                                                        )
-                                                                                                                                 ]
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ] .
-
-
-###  https://github.com/Ajamelot56/Dana-Senateurs/GoodPenetrationpop
-<https://github.com/Ajamelot56/Dana-Senateurs/GoodPenetrationpop> rdf:type owl:Class ;
-                                                                  owl:equivalentClass [ owl:intersectionOf ( ex:Country
-                                                                                                             [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty ex:penetrationPop ;
-                                                                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                    owl:onDatatype xsd:decimal ;
-                                                                                                                                    owl:withRestrictions ( [ xsd:minExclusive 20
-                                                                                                                                                           ]
-                                                                                                                                                         )
-                                                                                                                                  ]
-                                                                                                             ]
-                                                                                                           ) ;
-                                                                                        rdf:type owl:Class
-                                                                                      ] .
 
 
 #################################################################

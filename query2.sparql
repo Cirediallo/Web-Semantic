@@ -1,11 +1,13 @@
-PREFIX dbo: <https://dbpedia.org/ontology/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
-PREFIX schema: <https://schema.org/>
-PREFIX ex: <http://example.org/a#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo:  <https://dbpedia.org/ontology/>
+PREFIX schema:  <https://schema.org/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex:  <http://example.org/a#> 
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 
-SELECT 
+SELECT (avg(?internetUsers31Dec2017) as ?averageInternetUser2017)
+	
 WHERE {
-
+    ?africa rdf:type ?country;
+            ex:internetUsers31Dec2017 ?internetUsers31Dec2017
 }
-
-LIMIT 10

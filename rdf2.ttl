@@ -6,7 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <http://example.org/country/Algeria>
-        <owl:samAs https://dbpedia.org/page/Algeria>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Algeria" ;
         ex:population2018          "42,008,054" ;
@@ -17,7 +17,7 @@
         ex:facebookSubscribers31Dec2017  "19,000,000" .
 
 <http://example.org/country/Angola>
-        <owl:sameAs https://dbpedia.org/page/Angola>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Angola" ;
         ex:population2018          "30,774,205" ;
@@ -28,7 +28,7 @@
         ex:facebookSubscribers31Dec2017  "3,800,000" .
 
 <http://example.org/country/Benin>
-        <owl:sameAs https://dbpedia.org/page/Benin>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Benin" ;
         ex:population2018          "11,458,674" ;
@@ -39,7 +39,7 @@
         ex:facebookSubscribers31Dec2017  "920" .
 
 <http://example.org/country/Botswana>
-        <owl:sameAs https://dbpedia.org/page/Botswana>;
+      
         rdf:type                   ex:Country ;
         ex:africa                  "Botswana" ;
         ex:population2018          "2,333,201" ;
@@ -50,7 +50,7 @@
         ex:facebookSubscribers31Dec2017  "830" .
 
 <http://example.org/country/Burkina-Faso>
-        <owl:sameAs https://dbpedia.org/page/Burkina_Faso>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Burkina-Faso" ;
         ex:population2018          "19,751,651" ;
@@ -61,7 +61,7 @@
         ex:facebookSubscribers31Dec2017  "840" .
 
 <http://example.org/country/Burundi>
-        <owl:sameAs https://dbpedia.org/page/Burundi>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Burundi" ;
         ex:population2018          "11,216,450" ;
@@ -72,7 +72,7 @@
         ex:facebookSubscribers31Dec2017  "450" .
 
 <http://example.org/country/Cabo-Verde>
-        <owl:sameAs https://dbpedia.org/page/Cap-Vert>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Cabo-Verde" ;
         ex:population2018          "553,335" ;
@@ -83,7 +83,7 @@
         ex:facebookSubscribers31Dec2017  "240" .
 
 <http://example.org/country/Cameroon>
-        <owl:sameAs https://dbpedia.org/page/Cameroon>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Cameroon" ;
         ex:population2018          "24,678,234" ;
@@ -104,7 +104,7 @@
         ex:facebookSubscribers31Dec2017  "96" .
 
 <http://example.org/country/Comoros>
-        <owl:sameAs https://dbpedia.org/page/Comoros>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Comoros" ;
         ex:population2018          "832,347" ;
@@ -115,7 +115,7 @@
         ex:facebookSubscribers31Dec2017  "120" .
 
 <http://example.org/country/Congo-Dem.Rep.>
-        <owl:sameAs https://dbpedia.org/page/Congo>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Congo-Dem.Rep." ;
         ex:population2018          "84,004,989" ;
@@ -126,7 +126,7 @@
         ex:facebookSubscribers31Dec2017  "2,100,000" .
 
 <http://example.org/country/Cote-Ivoire>
-        <owl:sameAs https://dbpedia.org/page/Ivory_Coast>;
+      
         rdf:type                   ex:Country ;
         ex:africa                  "Cote-Ivoire" ;
         ex:population2018          "24,905,843" ;
@@ -137,7 +137,7 @@
         ex:facebookSubscribers31Dec2017  "3,800,000" .
 
 <http://example.org/country/Djibouti>
-<owl:sameAs https://dbpedia.org/page/Djibouti>;
+
         rdf:type                   ex:Country ;
         ex:africa                  "Djibouti" ;
         ex:population2018          "971,408" ;
@@ -148,7 +148,7 @@
         ex:facebookSubscribers31Dec2017  "180" .
 
 <http://example.org/country/Egypt>
-        <owl:sameAs https://dbpedia.org/page/Egypt>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Egypt" ;
         ex:population2018          "99,375,741" ;
@@ -159,7 +159,7 @@
         ex:facebookSubscribers31Dec2017  "35,000,000" .
 
 <http://example.org/country/Equatorial-Guinea>
-        <owl:sameAs https://dbpedia.org/page/Guinee_Equatorial>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Equatorial-Guinea" ;
         ex:population2018          "1,313,894" ;
@@ -170,7 +170,7 @@
         ex:facebookSubscribers31Dec2017  "67" .
 
 <http://example.org/country/Eritrea>
-        <owl:sameAs https://dbpedia.org/page/Eritrea>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Eritrea" ;
         ex:population2018          "5,187,948" ;
@@ -181,7 +181,7 @@
         ex:facebookSubscribers31Dec2017  "63" .
 
 <http://example.org/country/Ethiopia>
-        <owl:sameAs https://dbpedia.org/page/Ethiopia>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Ethiopia" ;
         ex:population2018          "107,534,882" ;
@@ -192,7 +192,7 @@
         ex:facebookSubscribers31Dec2017  "4,500,000" .
 
 <http://example.org/country/Gabon>
-        <owl:sameAs https://dbpedia.org/page/Gabon>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Gabon" ;
         ex:population2018          "2,067,561" ;
@@ -203,7 +203,7 @@
         ex:facebookSubscribers31Dec2017  "620" .
 
 <http://example.org/country/Gambia>
-        <owl:sameAs https://dbpedia.org/page/Gambia>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Gambia" ;
         ex:population2018          "2,163,765" ;
@@ -214,7 +214,7 @@
         ex:facebookSubscribers31Dec2017  "310" .
 
 <http://example.org/country/Ghana>
-        <owl:sameAs https://dbpedia.org/page/Ghana>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Ghana" ;
         ex:population2018          "29,463,643" ;
@@ -225,7 +225,7 @@
         ex:facebookSubscribers31Dec2017  "4,900,000" .
 
 <http://example.org/country/Guinea>
-        <owl:sameAs https://dbpedia.org/page/Guinea>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Guinea" ;
         ex:population2018          "13,052,608" ;
@@ -236,7 +236,7 @@
         ex:facebookSubscribers31Dec2017  "1,500,000" .
 
 <http://example.org/country/Guinea-Bissau>
-        <owl:sameAs https://dbpedia.org/page/Guinea_Bissau>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Guinea-Bissau" ;
         ex:population2018          "1,907,268" ;
@@ -247,7 +247,7 @@
         ex:facebookSubscribers31Dec2017  "110" .
 
 <http://example.org/country/Lesotho>
-        <owl:sameAs https://dbpedia.org/page/Lesotho>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Lesotho" ;
         ex:population2018          "2,263,010" ;
@@ -258,7 +258,7 @@
         ex:facebookSubscribers31Dec2017  "310" .
 
 <http://example.org/country/Liberia>
-        <owl:sameAs https://dbpedia.org/page/Liberia>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Liberia" ;
         ex:population2018          "4,853,516" ;
@@ -269,7 +269,7 @@
         ex:facebookSubscribers31Dec2017  "330" .
 
 <http://example.org/country/Libya>
-        <owl:sameAs https://dbpedia.org/page/Libya>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Libya" ;
         ex:population2018          "6,470,956" ;
@@ -280,7 +280,7 @@
         ex:facebookSubscribers31Dec2017  "3,500,000" .
 
 <http://example.org/country/Madagascar>
-        <owl:sameAs https://dbpedia.org/page/Madagascar>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Madagascar" ;
         ex:population2018          "26,262,810" ;
@@ -291,7 +291,7 @@
         ex:facebookSubscribers31Dec2017  "1,700,000" .
 
 <http://example.org/country/Malawi>
-        <owl:sameAs https://dbpedia.org/page/Malawi>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Malawi" ;
         ex:population2018          "19,164,728" ;
@@ -302,7 +302,7 @@
         ex:facebookSubscribers31Dec2017  "720" .
 
 <http://example.org/country/Mali>
-        <owl:sameAs https://dbpedia.org/page/Mali>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Mali" ;
         ex:population2018          "19,107,706" ;
@@ -313,7 +313,7 @@
         ex:facebookSubscribers31Dec2017  "1,500,000" .
 
 <http://example.org/country/Mauritania>
-        <owl:sameAs https://dbpedia.org/page/Mauritania>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Mauritania" ;
         ex:population2018          "4,540,068" ;
@@ -324,7 +324,7 @@
         ex:facebookSubscribers31Dec2017  "770" .
 
 <http://example.org/country/Mauritius>
-        <owl:sameAs https://dbpedia.org/page/Mauritius>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Mauritius" ;
         ex:population2018          "1,268,315" ;
@@ -335,7 +335,7 @@
         ex:facebookSubscribers31Dec2017  "700" .
 
 <http://example.org/country/Mayotte-(FR)>
-        <owl:sameAs https://dbpedia.org/page/Mayotte>;
+      
         rdf:type                   ex:Country ;
         ex:africa                  "Mayotte-(FR)" ;
         ex:population2018          "259,682" ;
@@ -346,7 +346,7 @@
         ex:facebookSubscribers31Dec2017  "71" .
 
 <http://example.org/country/Morocco>
-        <owl:sameAs https://dbpedia.org/page/Morocco>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Morocco" ;
         ex:population2018          "36,191,805" ;
@@ -357,7 +357,7 @@
         ex:facebookSubscribers31Dec2017  "15,000,000" .
 
 <http://example.org/country/Mozambique>
-        <owl:sameAs https://dbpedia.org/page/Mozambique>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Mozambique" ;
         ex:population2018          "30,528,673" ;
@@ -368,7 +368,7 @@
         ex:facebookSubscribers31Dec2017  "1,800,000" .
 
 <http://example.org/country/Namibia>
-        <owl:sameAs https://dbpedia.org/page/Namibia>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Namibia" ;
         ex:population2018          "2,587,801" ;
@@ -379,7 +379,7 @@
         ex:facebookSubscribers31Dec2017  "570" .
 
 <http://example.org/country/Niger>
-        <owl:sameAs https://dbpedia.org/page/Niger>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Niger" ;
         ex:population2018          "22,311,375" ;
@@ -390,7 +390,7 @@
         ex:facebookSubscribers31Dec2017  "440" .
 
 <http://example.org/country/Nigeria>
-        <owl:sameAs https://dbpedia.org/page/Nigeria>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Nigeria" ;
         ex:population2018          "195,875,237" ;
@@ -401,7 +401,7 @@
         ex:facebookSubscribers31Dec2017  "17,000,000" .
 
 <http://example.org/country/Reunion-(FR)>
-        <owl:sameAs https://dbpedia.org/page/Reunion>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Reunion-(FR)" ;
         ex:population2018          "883,247" ;
@@ -412,7 +412,7 @@
         ex:facebookSubscribers31Dec2017  "420" .
 
 <http://example.org/country/Rwanda>
-        <owl:sameAs https://dbpedia.org/page/Rwanda>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Rwanda" ;
         ex:population2018          "12,501,156" ;
@@ -443,7 +443,7 @@
         ex:facebookSubscribers31Dec2017  "52" .
 
 <http://example.org/country/Senegal>
-        <owl:sameAs https://dbpedia.org/page/Senegal>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Senegal" ;
         ex:population2018          "16,294,270" ;
@@ -454,7 +454,7 @@
         ex:facebookSubscribers31Dec2017  "2,900,000" .
 
 <http://example.org/country/Seychelles>
-        <owl:sameAs https://dbpedia.org/page/Seychelles>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Seychelles" ;
         ex:population2018          "95,235" ;
@@ -465,7 +465,7 @@
         ex:facebookSubscribers31Dec2017  "61" .
 
 <http://example.org/country/Sierra-Leone>
-        <owl:sameAs https://dbpedia.org/page/Sierra_Leone>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Sierra-Leone" ;
         ex:population2018          "7,719,729" ;
@@ -476,7 +476,7 @@
         ex:facebookSubscribers31Dec2017  "450" .
 
 <http://example.org/country/Somalia>
-        <owl:sameAs https://dbpedia.org/page/Somalia>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Somalia" ;
         ex:population2018          "15,181,925" ;
@@ -487,7 +487,7 @@
         ex:facebookSubscribers31Dec2017  "1,100,000" .
 
 <http://example.org/country/South-Africa>
-        <owl:sameAs https://dbpedia.org/page/South_Africa>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "South-Africa" ;
         ex:population2018          "57,398,421" ;
@@ -498,7 +498,7 @@
         ex:facebookSubscribers31Dec2017  "16,000,000" .
 
 <http://example.org/country/South-Sudan>
-        <owl:sameAs https://dbpedia.org/page/South_Sudan>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "South-Sudan" ;
         ex:population2018          "12,919,053" ;
@@ -509,7 +509,7 @@
         ex:facebookSubscribers31Dec2017  "180" .
 
 <http://example.org/country/Sudan>
-        <owl:sameAs https://dbpedia.org/page/Sudan>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Sudan" ;
         ex:population2018          "41,511,526" ;
@@ -520,7 +520,7 @@
         ex:facebookSubscribers31Dec2017  "2,600,000" .
 
 <http://example.org/country/Swaziland>
-        <owl:sameAs https://dbpedia.org/page/Swaziland>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Swaziland" ;
         ex:population2018          "1,391,385" ;
@@ -531,7 +531,7 @@
         ex:facebookSubscribers31Dec2017  "170" .
 
 <http://example.org/country/Tanzania>
-        <owl:sameAs https://dbpedia.org/page/Tanzania>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Tanzania" ;
         ex:population2018          "59,091,392" ;
@@ -542,7 +542,7 @@
         ex:facebookSubscribers31Dec2017  "6,100,000" .
 
 <http://example.org/country/Togo>
-        <owl:sameAs https://dbpedia.org/page/Togo>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Togo" ;
         ex:population2018          "7,990,926" ;
@@ -553,7 +553,7 @@
         ex:facebookSubscribers31Dec2017  "560" .
 
 <http://example.org/country/Tunisia>
-        <owl:sameAs https://dbpedia.org/page/Tunisia>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Tunisia" ;
         ex:population2018          "11,659,174" ;
@@ -564,7 +564,7 @@
         ex:facebookSubscribers31Dec2017  "6,400,000" .
 
 <http://example.org/country/Uganda>
-        <owl:sameAs https://dbpedia.org/page/Uganda>;
+       
         rdf:type                   ex:Country ;
         ex:africa                  "Uganda" ;
         ex:population2018          "44,270,563" ;
@@ -575,7 +575,7 @@
         ex:facebookSubscribers31Dec2017  "2,600,000" .
 
 <http://example.org/country/Zambia>
-        <owl:sameAs https://dbpedia.org/page/Zambia>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Zambia" ;
         ex:population2018          "17,609,178" ;
@@ -586,7 +586,7 @@
         ex:facebookSubscribers31Dec2017  "1,600,000" .
 
 <http://example.org/country/Zimbabwe>
-        <owl:sameAs https://dbpedia.org/page/Zimbabwe>;
+        
         rdf:type                   ex:Country ;
         ex:africa                  "Zimbabwe" ;
         ex:population2018          "16,913,261" ;
@@ -595,33 +595,3 @@
         ex:penetrationPop          40.2 ;
         ex:internetGrowth          "13,49%" ;
         ex:facebookSubscribers31Dec2017  "880" .
-
-<http://example.org/country/TOTAL-AFRICA>
-        rdf:type                   ex:Country ;
-        ex:africa                  "TOTAL-AFRICA" ;
-        ex:population2018          "1,287,914,329" ;
-        ex:internetUsers31Dec2000  "4,514,400" ;
-        ex:internetUsers31Dec2017  "453329534" ;
-        ex:penetrationPop          "35,2" ;
-        ex:internetGrowth          "9,94%" ;
-        ex:facebookSubscribers31Dec2017  "177,005,700" .
-
-<http://example.org/country/Rest-of-World>
-        rdf:type                   ex:Country ;
-        ex:africa                  "Rest-of-World" ;
-        ex:population2018          "6,346,844,099" ;
-        ex:internetUsers31Dec2000  "83.1 %" ;
-        ex:internetUsers31Dec2017  "3703602606" ;
-        ex:penetrationPop          "58,4" ;
-        ex:internetGrowth          "89.1 %" ;
-        ex:facebookSubscribers31Dec2017  "1,942,054,452" .
-
-<http://example.org/country/WORLD-TOTAL>
-        rdf:type                   ex:Country ;
-        ex:africa                  "WORLD-TOTAL" ;
-        ex:population2018          "7,634,758,428" ;
-        ex:internetUsers31Dec2000  "100.0 %" ;
-        ex:internetUsers31Dec2017  "4156932140" ;
-        ex:penetrationPop          "54,4" ;
-        ex:internetGrowth          "100.0 %" ;
-        ex:facebookSubscribers31Dec2017  "2,119,060,152" .
